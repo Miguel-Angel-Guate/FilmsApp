@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SlideshowComponent } from './components/slideshow/slideshow.component';
 import { CommonModule } from '@angular/common';
+import { FilmsPosterComponent } from './components/films-poster/films-poster.component';
+import { RatingModule } from 'ng-starrating';
 
 @NgModule({
   declarations: [
@@ -19,8 +21,15 @@ import { CommonModule } from '@angular/common';
     SearchComponent,
     NavbarComponent,
     SlideshowComponent,
+    FilmsPosterComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, CommonModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    CommonModule,
+    HttpClientModule,
+    RatingModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

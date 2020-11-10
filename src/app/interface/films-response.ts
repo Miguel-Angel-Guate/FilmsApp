@@ -1,5 +1,5 @@
 export interface FilmsResponse {
-  results: film[];
+  results: Film[];
   page: number;
   total_results: number;
   dates: Dates;
@@ -11,7 +11,7 @@ export interface Dates {
   minimum: Date;
 }
 
-export interface film {
+export interface Film {
   popularity: number;
   vote_count: number;
   video: boolean;

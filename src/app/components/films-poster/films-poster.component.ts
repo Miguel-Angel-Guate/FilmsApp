@@ -1,13 +1,15 @@
 import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
+
 import Swiper from 'swiper';
 
 @Component({
-  selector: 'app-slideshow',
-  templateUrl: './slideshow.component.html',
-  styleUrls: ['./slideshow.component.css'],
+  selector: 'app-films-poster',
+  templateUrl: './films-poster.component.html',
+  styleUrls: ['./films-poster.component.css'],
 })
-export class SlideshowComponent implements OnInit, AfterViewInit {
-  @Input() films: any;
+export class FilmsPosterComponent implements OnInit, AfterViewInit {
+  @Input() coming: any;
+  // public coming: any;
   public mySwiper: Swiper;
 
   constructor() {}
@@ -36,11 +38,16 @@ export class SlideshowComponent implements OnInit, AfterViewInit {
     // mySwiper.slideNext();
   }
 
-  ngOnInit(): void {}
-  slideNext() {
+  ngOnInit(): void {
+    // this.filmService.getUpcomming().subscribe((resultUpcomming: any) => {
+    //   this.coming = resultUpcomming.results;
+    //   console.log('look the popular', this.coming);
+    // });
+  }
+  slideNextt() {
     this.mySwiper.slideNext();
   }
-  slidePrev() {
+  slidePrevv() {
     this.mySwiper.slidePrev();
   }
 }

@@ -1,5 +1,5 @@
-<p>home works!</p>
-
+<h1>
+  Premiere</h1>
 <div class="row" *ngIf="films.length > 0">
   <div class="col">
 
@@ -7,3 +7,6 @@
 
   </div>
 </div>
+<h1 class="mt-4">UpComing films</h1>
+
+<app-films-poster *ngIf="coming.length > 0" [coming]="coming"></app-films-poster>

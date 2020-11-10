@@ -37,6 +37,10 @@ hr{
     height: 330px;
     max-width: 100%;
 }
+.swiper-containerTrend {
+    height: 330px;
+    max-width: 200%;
+}
 .swiper-button-next, .swiper-button-prev {
 color: white!important;
 }
@@ -47,4 +51,14 @@ color: white!important;
     position: absolute;
     width: 100%;
 }
+.poster {
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px greenyellow;
+    margin: 5px;
+}
+.hi {
+max-width: 50px;
+}
+
+
  
