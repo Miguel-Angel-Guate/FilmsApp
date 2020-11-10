@@ -8,10 +8,11 @@ import Swiper from 'swiper';
 })
 export class SlideshowComponent implements OnInit, AfterViewInit {
   @Input() films: any;
+  public mySwiper: Swiper;
 
   constructor() {}
   ngAfterViewInit(): void {
-    const mySwiper = new Swiper('.swiper-container', {
+    this.mySwiper = new Swiper('.swiper-container', {
       // Optional parameters
       // direction: 'vertical',
       loop: true,
@@ -32,9 +33,16 @@ export class SlideshowComponent implements OnInit, AfterViewInit {
       //   el: '.swiper-scrollbar',
       // },
     });
+    // mySwiper.slideNext();
   }
 
   ngOnInit(): void {
     console.log('look the movies in slide', this.films);
+  }
+  slideNext() {
+    this.mySwiper.slideNext();
+  }
+  slidePrev() {
+    this.mySwiper.slidePrev();
   }
 }

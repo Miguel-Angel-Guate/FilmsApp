@@ -9,10 +9,18 @@ import { SearchComponent } from './pages/search/search.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SlideshowComponent } from './components/slideshow/slideshow.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, FilmsComponent, SearchComponent, NavbarComponent, SlideshowComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    FilmsComponent,
+    SearchComponent,
+    NavbarComponent,
+    SlideshowComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, CommonModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
