@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-3 mb-5" *ngFor="let item of coming">
-    <img src="https://image.tmdb.org/t/p/w500{{item.poster_path}}" class="img-fluid poster">
+    <img [src]="item.poster_path | poster" class="img-fluid poster" (click)="clicOverFilmPoster(item)">
     <div>
       <h3>{{item.title}}</h3>
       <div class="row">

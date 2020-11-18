@@ -12,6 +12,10 @@ import { SlideshowComponent } from './components/slideshow/slideshow.component';
 import { CommonModule } from '@angular/common';
 import { FilmsPosterComponent } from './components/films-poster/films-poster.component';
 import { RatingModule } from 'ng-starrating';
+//  this to do no refresch in forms in the project
+import { FormsModule } from '@angular/forms';
+import { PosterPipe } from './pipes/poster.pipe';
+import { ShowActorsCreditsComponent } from './components/show-actors-credits/show-actors-credits.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +26,8 @@ import { RatingModule } from 'ng-starrating';
     NavbarComponent,
     SlideshowComponent,
     FilmsPosterComponent,
+    PosterPipe,
+    ShowActorsCreditsComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +35,7 @@ import { RatingModule } from 'ng-starrating';
     CommonModule,
     HttpClientModule,
     RatingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

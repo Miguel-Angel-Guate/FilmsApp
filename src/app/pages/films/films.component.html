@@ -1,1 +1,33 @@
-<p>films works!</p>
+<div class="row mt-4" *ngIf="filmDetail">
+  <div class="col-md-6">
+    <img [src]="filmDetail.poster_path | poster" [alt]="filmDetail.title" class="img-thumbnail">
+  </div>
+  <div class="col-md-6">
+    <h3>{{filmDetail.title}}</h3>
+    <div class="row">
+      <div class="col">
+        <star-rating [value]="filmDetail.vote_average | number: '1.0-0'" totalstars="10" checkedcolor="red"
+          uncheckedcolor="white" size="21px" readonly="false">
+        </star-rating>
+      </div>
+      <div class="col">
+        {{filmDetail.vote_average}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-white">
+        {{filmDetail.overview}}
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col">
+        <button class="btn btn-outline-info" (click)="backButton()">Back</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row mt-5" *ngIf="cast.length > 0">
+  <div class="col">
+    <app-show-actors-credits [cast]="cast"></app-show-actors-credits>
+  </div>
+</div>
